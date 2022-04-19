@@ -1,5 +1,5 @@
 <template>
-  <button class="mx-1 d-block">
+  <button class="mx-1 d-block" style="">
     <i :class="'icofont-' + icon"></i>
   </button>
 </template>
@@ -16,7 +16,5 @@ export default {
 </script>
 
 <style scoped>
-.mx-1{
-margin: 0 7.5px;
-}
+
 </style>
