@@ -4,5 +4,8 @@
     flex-direction: row;
     column-gap: $nav-item-spacing;
     list-style: none;
+    li{
+    cursor: pointer;
+    }
   }
 }

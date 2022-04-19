@@ -5,6 +5,24 @@
        column-gap: 15px;
   list-style: none;
 }
+[data-main-nav] ul li {
+  cursor: pointer;
+}
+
+[data-control-menu] {
+  display: flex;
+}
+[data-control-menu] button {
+  display: none;
+}
+[data-control-menu] .mx-1 {
+  margin: 0 1.2px;
+}
+[data-control-menu] [class*=icofont] {
+  border: 1px solid #7d7d7d;
+  padding: 3px;
+  border-radius: 3px;
+}
 
 textarea {
   width: 100%;
@@ -31,8 +49,4 @@ textarea:-ms-input-placeholder {
 textarea::placeholder {
   text-transform: capitalize;
   color: #707070;
-}
-
-svg {
-  max-width: 15px;
 }/*# sourceMappingURL=index.css.map */

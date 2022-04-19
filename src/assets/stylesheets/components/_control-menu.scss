@@ -1,0 +1,15 @@
+[data-control-menu] {
+  display: flex;
+  & button {
+    display: none;
+  }
+ & .mx-1 {
+    margin: 0 1.2px;
+  }
+
+  & [class*="icofont"] {
+    border: 1px solid $grey;
+    padding: 3px;
+    border-radius: $border-radius-small;
+  }
+}
