@@ -128,7 +128,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 textarea {
   width: 100%;
   height: 72vh;
