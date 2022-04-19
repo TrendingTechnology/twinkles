@@ -1,25 +1,34 @@
-# twinkles
+# Twinkles
 
-## Project setup
-```
-npm install
-```
+A cross platform markdown text editor
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Simple
+- Lightweight
+- Export markdown to HTML, and PDF
+- Offline code highlightining
+- Ships with grammary
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Demo
+![twinkles](sample.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# twinkles
+## Installation
+
+visit [https://twinkles.vercel.app](https://twinkles.vercel.app)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Feedback
+
+If you have any feedback, please reach out to us at fake@fake.com
+
+## 🚀 About Me
+
+**Hi, I'm Opeoluwa! 👋**
+
+A full stack developer devoted to building community projects...
+
+If you find Twinkles helpful, consider [buying me pizza 🍕](https://getfidia.com/pay/opeolluwa/open-source)
