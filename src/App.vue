@@ -5,14 +5,15 @@
         <button
           v-for="link in links"
           :key="link"
-          class="text-capitalize inline-block ma-2"
+          class="text-capitalize inline-block ma-2 d-none"
         >
           {{ link }}
         </button>
 
+        <app-main-navigation />
         <v-spacer></v-spacer>
 
-        <div class="d-flex">
+        <div data-control-menu>
           <base-control
             v-for="control in editorControl"
             :key="control.icon"
@@ -55,21 +56,28 @@
           </v-col>
 
           <v-col>
-            <textarea
-              min-height="75vh"
-              rounded="lg"
-              name=""
-              id=""
-              placeholder="write here ..."
-              v-model="rawBlob"
-            ></textarea>
-            <v-sheet min-height="75vh" rounded="lg" class="d-none">
-              <!--   <v-textarea
-                name="input-7-4"
-                outlined
-                placeholder="Write here ..."
-                style=""
-              ></v-textarea> -->
+            <v-sheet min-height="75vh" rounded="lg" class="">
+              <!----------------inject the router view here---------->
+              <v-tabs>
+                <v-tab class="text-capitalize"> <v-icon left>mdi-pencil-outline</v-icon> Write </v-tab>
+                <v-tab class="text-capitalize"> <v-icon left>mdi-eye-outline</v-icon> Preview </v-tab>
+
+              
+                <v-tab-item class="px-2">
+                  two Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Repudiandae, repellat? Nihil, aliquam. Tempore voluptatum
+                  doloremque, consequatur veniam praesentium aperiam illo saepe
+                  ducimus sunt amet. Maxime porro ipsa atque quisquam optio!
+                </v-tab-item>
+
+                <v-tab-item>
+                  three Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Repudiandae, repellat? Nihil, aliquam. Tempore
+                  voluptatum doloremque, consequatur veniam praesentium aperiam
+                  illo saepe ducimus sunt amet. Maxime porro ipsa atque quisquam
+                  optio!
+                </v-tab-item>
+              </v-tabs>
             </v-sheet>
           </v-col>
         </v-row>
@@ -94,9 +102,11 @@
 
 <script>
 import BaseControl from "./components/BaseControl.vue";
+import AppMainNavigation from "./components/AppMainNavigation.vue";
+
 // import Controls from './components/Controls.vue';
 export default {
-  components: { BaseControl },
+  components: { BaseControl, AppMainNavigation },
   // components: { Controls },
   data: () => ({
     links: ["File", "Edit", "Export", "Settings", "Help"],
@@ -106,7 +116,7 @@ export default {
       { icon: "heading" },
       { icon: "underline" },
       { icon: "strike-through" },
-      { icon: "bookmark" },
+      { icon: "book-mark" },
       { icon: "superscript" },
       { icon: "subscript" },
       { icon: "table" },
@@ -117,36 +127,21 @@ export default {
       { icon: "align-center" },
       { icon: "align-left" },
       { icon: "quote-left" },
-      { icon: "quote-right" },
       { icon: "listine-dots" },
-      { icon: "listing-box" },
       { icon: "listing-number" },
     ],
     rawBlob: null,
+    items: [
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me 2" },
+    ],
   }),
 };
 </script>
 
 
-<style scoped lang="scss">
-textarea {
-  width: 100%;
-  height: 72vh;
-  /* overflow-y: scroll; */
-  padding: 17.5px;
-  font-size: 1.2rem;
-  border: none;
-  outline: none;
-  background: #fff;
-  border-radius: 12px;
-}
-
-textarea::placeholder {
-  text-transform: capitalize;
-  color: #707070;
-}
-
-svg {
-  max-width: 15px;
-}
+<style>
+@import url("./assets/stylesheets/index.css");
 </style>
